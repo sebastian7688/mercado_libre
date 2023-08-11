@@ -1,6 +1,6 @@
 <?php
 require_once "includes/config.php";
-session_start();
+
 if (isset($_POST['nombre']) && isset($_POST['contra'])) {
     $nombre = $_POST['nombre'];
     $pass = md5($_POST['contra']);
@@ -20,4 +20,4 @@ if (isset($_POST['nombre']) && isset($_POST['contra'])) {
     }
 }
 $section = "login";
-require_once "views/login.php";
+require_once "views/layout.php";

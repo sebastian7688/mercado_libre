@@ -1,7 +1,7 @@
 <?php
 require_once "includes/config.php";
 //image
-$sql="SELECT usuarios.usu_nombre as uid, posts.image FROM usuarios 
+$sql="SELECT usuarios.nombre as uid, posts.image FROM usuarios 
 INNER JOIN posts 
 ON posts.id='".$_GET['id']."' AND posts.usuario_id=usuarios.id";
 $query=mysqli_query($link,$sql);

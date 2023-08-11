@@ -27,7 +27,7 @@ session_start()?>
     </div>
     <div class="navlink">
       <a 
-        style="float: left; display: block; color: #ffffff; text-align: center; padding: 20px 16px 23px 16px; text-decoration: none;"><b><?php if(isset($_SESSION['usuario'])){echo($_SESSION['usuario']['usu_nombre']);} ?></b></a>
+        style="float: left; display: block; color: #ffffff; text-align: center; padding: 20px 16px 23px 16px; text-decoration: none;"><b><?php if(isset($_SESSION['usuario'])){echo($_SESSION['usuario']['nombre']);} ?></b></a>
     </div>
   </div>
 </div>

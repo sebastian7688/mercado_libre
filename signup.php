@@ -3,7 +3,7 @@ require_once "includes/config.php";
 
 if (isset($_POST['nombre']) && isset($_POST['email']) && isset($_POST['contra'])) {
     $pass = md5($_POST['contra']);
-    $sql = "INSERT INTO usuarios (id,usu_nombre,usu_clave,usu_email,fecha_alta,fecha_baja) VALUES (null,'". $_POST['nombre']."','". $pass ."','". ($_POST['email'])."',NOW(),null)";
+    $sql = "INSERT INTO usuarios (id,nombre,contrasenia,saldo_en_cuenta,foto_de_perfil,correo_electronico,fecha_de_creacion,fecha_de_eliminacion) VALUES (null,'". $_POST['nombre']."','". $pass ."',0,'default.jpg','". ($_POST['email'])."',NOW(),null)";
     $query = mysqli_query($link, $sql);
 
     if (!$query) {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-03-2023 a las 01:03:52
+-- Tiempo de generación: 11-08-2023 a las 13:42:19
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -146,22 +146,27 @@ INSERT INTO `tag_post` (`id`, `tag_id`, `post_id`, `fecha_alta`, `fecha_baja`) V
 
 CREATE TABLE `usuarios` (
   `id` int(255) NOT NULL,
-  `usu_nombre` varchar(20) NOT NULL,
-  `usu_clave` varchar(33) NOT NULL,
-  `usu_email` varchar(255) NOT NULL,
-  `fecha_alta` datetime DEFAULT NULL,
-  `fecha_baja` datetime DEFAULT NULL
+  `nombre` varchar(20) NOT NULL,
+  `contrasenia` varchar(32) NOT NULL,
+  `saldo_en_cuenta` int(255) NOT NULL,
+  `foto_de_perfil` varchar(255) NOT NULL,
+  `correo_electronico` varchar(255) NOT NULL,
+  `fecha_de_creacion` datetime DEFAULT NULL,
+  `fecha_de_eliminacion` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `usu_nombre`, `usu_clave`, `usu_email`, `fecha_alta`, `fecha_baja`) VALUES
-(1, 'reichsacht', '5eb3c70fb1c47a19a7b6674092c19fc0', 'hratzeld@gmail.com', '2023-02-26 15:37:31', NULL),
-(2, 'Matayoshi', '5eb3c70fb1c47a19a7b6674092c19fc0', 'sdmatayoshi@gmail.com', '2023-02-27 12:40:10', NULL),
-(3, 'kamuofujino', '5eb3c70fb1c47a19a7b6674092c19fc0', 'kamuofujino@gmail.com', '2023-02-27 20:13:54', NULL),
-(4, 'sdmatayoshi', '41f5d469289efa58df6a726273313439', 'sdmatayoshi@gmail.com', '2023-02-28 19:19:21', NULL);
+INSERT INTO `usuarios` (`id`, `nombre`, `contrasenia`, `saldo_en_cuenta`, `foto_de_perfil`, `correo_electronico`, `fecha_de_creacion`, `fecha_de_eliminacion`) VALUES
+(1, 'reichsacht', '5eb3c70fb1c47a19a7b6674092c19fc0', 0, '', 'hratzeld@gmail.com', '2023-02-26 15:37:31', NULL),
+(2, 'Matayoshi', '5eb3c70fb1c47a19a7b6674092c19fc0', 0, '', 'sdmatayoshi@gmail.com', '2023-02-27 12:40:10', NULL),
+(3, 'kamuofujino', '5eb3c70fb1c47a19a7b6674092c19fc0', 0, '', 'kamuofujino@gmail.com', '2023-02-27 20:13:54', NULL),
+(4, 'sdmatayoshi', '41f5d469289efa58df6a726273313439', 0, '', 'sdmatayoshi@gmail.com', '2023-02-28 19:19:21', NULL),
+(5, 'elpepe', 'e10adc3949ba59abbe56e057f20f883e', 0, '', 'pepito@gmail.com', '2023-08-11 08:17:23', NULL),
+(6, 'asdf', '912ec803b2ce49e4a541068d495ab570', 0, '', 'asdf@asdf', '2023-08-11 08:39:48', NULL),
+(7, 'qwer', '962012d09b8170d912f0669f6d7d9d07', 0, 'default.jpg', 'qwer@qwer', '2023-08-11 08:41:28', NULL);
 
 -- --------------------------------------------------------
 
@@ -269,7 +274,7 @@ ALTER TABLE `tag_post`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `videos`

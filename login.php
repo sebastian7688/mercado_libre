@@ -1,6 +1,6 @@
 <?php
 require_once "includes/config.php";
-
+session_start();
 if (isset($_POST['nombre']) && isset($_POST['contra'])) {
     $nombre = $_POST['nombre'];
     $pass = md5($_POST['contra']);
@@ -14,7 +14,6 @@ if (isset($_POST['nombre']) && isset($_POST['contra'])) {
         exit();
     }
     if (mysqli_num_rows($result) == 1) {
-        session_start();
         $_SESSION['usuario'] = mysqli_fetch_assoc($result);
         header('Location: index.php');
     }

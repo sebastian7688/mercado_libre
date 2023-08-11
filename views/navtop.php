@@ -2,7 +2,7 @@
 if (!isset($section)) {
   header("Location: ../index.php");
 }
-session_start()?>
+if(session_status() !== PHP_SESSION_ACTIVE)session_start();?>
 <div class="navtop">
   <div class="navitems">
     <div class="navlink navbrand">

@@ -10,9 +10,8 @@ if (isset($_POST['nombre']) && isset($_POST['email']) && isset($_POST['contra'])
         echo "Fallo consulta: " . mysqli_error($link);
         exit();
     }else{
-        header("Location: settings.php");
+        header("Location: login.php");
     }
 }
 $section = "signup";
-$title = "Signup";
 require_once "views/layout.php";

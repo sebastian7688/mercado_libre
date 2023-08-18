@@ -1,7 +1,124 @@
 <div align="center">
-    <div class="profile-img" style="margin:2rem">
-        <img src="img/<?php echo $_SESSION['usuario']['foto_de_perfil']; ?>" alt="" style="height: 20rem;width: 20rem; border-radius: 50%; object-fit: cover; background-color: white;">
-    </div>
+<div class="profile-img" style="margin:2rem">
+            <div class="container" style="position:relative">
+
+                <div>
+                    <a href="#ei" rel="modal:open" style="margin: auto; width: 50%;" id="image"><img src="img/users/<?php echo $_SESSION['usuario']['foto_de_perfil']; ?>" alt="" class="profile" style="height: 20rem;width: 20rem; border-radius: 50%; object-fit: cover; background-color: white;"></a>
+
+
+                </div>
+                <div id="text" style="position:absolute; width: 100%; top:50%"></div>
+
+            </div>
+
+            <div id="ei" class="modal" style="width:29rem;">
+
+
+                <a href="#secret" rel="modal:open" style="text-decoration: none; color: black; cursor: default;">
+                    <h3>Default</h3>
+                </a>
+                <div id="secret" class="modal" style="width:13rem; height:13rem; align-items: center;">
+                    <div class="Height" style="display: inline-block; width:0px;">
+                        <form method="post" style="width:9rem;display: inline-block; user-select:none">
+                            <br>
+                            <input type="image" src="img/users/default1.png" class="void" style="width: 0px; height:8rem; object-fit: cover; filter:opacity(0);" disabled>
+                            <label class="lbl" style="display: block; text-align: center; filter:opacity(0);">Useless</label>
+                        </form>
+                    </div>
+                    <div style="display: inline-block;">
+                        <form method="post" class="option-form" style="width: 8rem; display: inline-block;">
+                            <input type="hidden" name="default-secret" value="default-secret.png" class="Height" style="display: inline-block; width:0px;">
+                            <input title="Set H-Chan as profile photo" type="image" id="default-secret" class="option-photo" style="margin: 0, 0, 0, 0; width: 8rem; height:8rem; object-fit: cover; transition:  filter 0.2s, margin-bottom 0.2s ease-in-out;" name="default-secret" value="default-secret.png" alt="Login" src="img/users/default-secret.png">
+                            <label style="display: block; text-align: center;">H-Chan</label>
+                        </form>
+                    </div>
+                </div>
+
+                <div style="border-bottom: 1px solid black;border-top: 1px solid black;">
+                    <div>
+                        <div class="Height" style="display: inline-block; width:0px;">
+                            <form method="post" class="option-form" style="width: 8rem; display: inline-block;user-select:none">
+                                <br>
+                                <input type="image" src="img/users/default1.png" class="void" style="width: 0px; height:8rem; object-fit: cover; filter:opacity(0);" disabled>
+                                <label class="lbl" style="display: block; text-align: center; filter:opacity(0);">Useless</label>
+                            </form>
+                        </div>
+                        <div style="display: inline-block;">
+                            <form method="post" class="option-form" style="width: 8rem; display: inline-block;">
+                                <input type="hidden" name="default1" value="default1.png" class="Height" style="display: inline-block; width:0px;">
+                                <input title="Set V-Chan as profile photo" type="image" id="default1" class="option-photo" style="margin: 0, 0, 0, 0; width: 8rem; height:8rem; object-fit: cover; transition:  filter 0.2s, margin-bottom 0.2s ease-in-out;" name="default1" value="default1.png" alt="Login" src="img/users/default1.png">
+                                <label style="display: block; text-align: center;">V-chan</label>
+                            </form>
+                        </div>
+                        <div style="display: inline-block;">
+                            <form method="post" class="option-form" style="width: 8rem; display: inline-block;">
+                                <input type="hidden" name="default2" value="default2.png" class="Height" style="display: inline-block; width:0px;">
+                                <input title="Set D-Kun as profile photo" type="image" id="default2" class="option-photo" style="margin: 0, 0, 0, 0; width: 8rem; height:8rem; object-fit: cover; transition:  filter 0.2s, margin-bottom 0.2s ease-in-out;" name="default2" value="default2.png" alt="Login" src="img/users/default2.png">
+                                <label style="display: block; text-align: center;">V-kun</label>
+                            </form>
+                        </div>
+                        <div style="display: inline-block;">
+                            <form method="post" class="option-form" style="width: 8rem; display: inline-block;">
+                                <input type="hidden" name="default3" value="default3.png" class="Height" style="display: inline-block; width:0px;">
+                                <input title="Set D-Chan as profile photo" type="image" id="default3" class="option-photo" style="margin: 0, 0, 0, 0; width: 8rem; height:8rem; object-fit: cover; transition:  filter 0.2s, margin-bottom 0.2s ease-in-out;" name="default3" value="default4.png" alt="Login" src="img/users/default3.png">
+                                <label style="display: block; text-align: center;">D-chan</label>
+                            </form>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="Height" style="display: inline-block; width:0px;">
+                            <form method="post" class="option-form" style="width: 8rem; display: inline-block;user-select:none">
+                                <br>
+                                <input type="image" src="img/users/default1.png" class="void" style="width: 0px; height:8rem; object-fit: cover; filter:opacity(0);" disabled>
+                                <label class="lbl" style="display: block; text-align: center; filter:opacity(0);">Useless</label>
+                            </form>
+                        </div>
+                        <div style="display: inline-block;">
+                            <form method="post" class="option-form" style="width: 8rem; display: inline-block;">
+                                <input type="hidden" name="default4" value="default4.png" class="Height" style="display: inline-block; width:0px;">
+                                <input title="Set P-Chan as profile photo" type="image" id="default4" class="option-photo" style="margin: 0, 0, 0, 0; width: 8rem; height:8rem; object-fit: cover; transition:  filter 0.2s, margin-bottom 0.2s ease-in-out;" name="default4" value="default4.png" alt="Login" src="img/users/default4.png">
+                                <label style="display: block; text-align: center;">P-chan</label>
+                            </form>
+                        </div>
+                        <div style="display: inline-block;" class="cont">
+                            <form method="post" class="option-form" style="width: 8rem; display: inline-block;">
+                                <input type="hidden" name="default5" value="default5.png" class="Height" style="display: inline-block; width:0px;">
+                                <input title="Set K-Chan as profile photo" type="image" id="default5" class="option-photo" style="margin: 0, 0, 0, 0; width: 8rem; height:8rem; object-fit: cover; transition:  filter 0.2s, margin-bottom 0.2s ease-in-out;" name="default5" value="default5.png" alt="Login" src="img/users/default5.png">
+                                <label style="display: block; text-align: center;">K-chan</label>
+                            </form>
+                        </div>
+                        <div style="display: inline-block;">
+                            <form method="post" class="option-form" style="width: 8rem; display: inline-block;">
+                                <input type="hidden" name="default6" value="default6.png" class="Height" style="display: inline-block; width:0px;">
+                                <input title="Set S-Chan as profile photo" type="image" id="default6" class="option-photo" style="margin: 0, 0, 0, 0; width: 8rem; height:8rem; object-fit: cover; transition:  filter 0.2s, margin-bottom 0.2s ease-in-out;" name="default6" value="default6.png" alt="Login" src="img/users/default6.png">
+                                <label style="display: block; text-align: center;">S-chan</label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <h3>Custom</h3>
+                <div style="height: 30%; width: 100%; border-radius: 1rem; background-color: gray; background-image:url(img/users/upload.png); background-size:contain; background-repeat:no-repeat; background-position:center">
+                    <form method="post" style="width: 8rem;display: inline-block">
+                        <input type="hidden" name="default6" value="default6.png" style="width: 8rem;">
+                        <input type="hidden" style="width: 8rem;">
+                    </form>
+                    <a href="#uf" rel="modal:open"><img src="img/users/blank.png" alt="" style="height: 3rem;width: 100%; border-radius: 50%; object-fit: cover; "></a>
+
+                    <div id="uf" class="modal" style="width:29rem">
+                        <!-- <form method="post" style="width: 29rem;display: inline-block">
+                        <input type="file" name="upload" id="upload">
+                        <input type="submit" value="Upload">
+                    </form> -->
+                        Work in progress
+                    </div>
+                    <form method="post" style="width: 8rem;display: inline-block">
+                        <input type="hidden" name="default6" value="default6.png" style="width: 8rem;">
+                        <input type="hidden" style="width: 8rem;">
+                    </form>
+                </div>
+                <label style="display: block; text-align: center;">Local</label>
+            </div>
+        </div>
     <a>Nombre de usuario: <?php echo ($_SESSION['usuario']['nombre']);  ?></a>
     <br>
     <a>Correo: <?php echo ($_SESSION['usuario']['correo_electronico']);  ?></a>

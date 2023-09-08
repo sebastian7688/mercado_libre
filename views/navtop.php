@@ -22,7 +22,7 @@ if(session_status() !== PHP_SESSION_ACTIVE)session_start();?>
         style="float: left; display: block; color: #ffffff; text-align: center; padding: 20px 16px 23px 16px; text-decoration: none;"><b>Forum</b></a>
     </div>
     <div class="navlink">
-      <a href="3"
+      <a href="index.php"
         style="float: left; display: block; color: #ffffff; text-align: center; padding: 20px 16px 23px 16px; text-decoration: none;"><b>Home</b></a>
     </div>
     <div class="navlink">

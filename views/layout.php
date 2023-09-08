@@ -1,3 +1,5 @@
+<link href="css/layout.css" rel="stylesheet">
+
 <?php
 if (!isset($section)) {
     header("Location: ../index.php");
@@ -61,10 +63,38 @@ if (!isset($section)) {
     }
     ?>
     </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <footer>
         <?php
-        require_once $section . ".php";
+        
         if ($section == 'posts') {
+            require_once $section . ".php";
             require_once "views/footer.php";
         }
         ?>

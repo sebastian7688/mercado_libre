@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-08-2023 a las 14:53:38
+-- Tiempo de generación: 22-09-2023 a las 16:40:09
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `v-chan`
+-- Base de datos: `p-chan`
 --
 
 -- --------------------------------------------------------
@@ -38,16 +38,17 @@ CREATE TABLE `alimentos` (
   `fecha_de_eliminacion` datetime DEFAULT NULL,
   `estado` varchar(255) NOT NULL,
   `acepta_mercadopago` tinyint(1) NOT NULL,
-  `fotos` varchar(255) NOT NULL
+  `fotos` varchar(255) NOT NULL,
+  `tag_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `alimentos`
 --
 
-INSERT INTO `alimentos` (`id`, `titulo`, `precio`, `descripcion`, `id_publicador`, `stock`, `fecha_de_creacion`, `fecha_de_eliminacion`, `estado`, `acepta_mercadopago`, `fotos`) VALUES
-(1, 'おーいお茶500ｍｌペットボトル／おちゃ', 3500, 'お弁当をご注文時に限りお茶を格安で販売いたします。\r\n\r\n【主なご利用用途】\r\n会議・セミナー・謝恩会・説明会など\r\n', 1, 500, '2023-08-04 14:25:18', '0000-00-00 00:00:00', 'Si', 1, 'drj44fkgi8.jpg'),
-(2, 'もち', 0, 'お正月といえば「もち」。鏡もちにお汁粉、焼いて食べても煮て食べてもおいしいもちですが、日本一もちを購入している都市はどこなのでしょうか。今回は、総務省の家計調査をもとに、もちの購入量が多い地域をランキング化してみました。日本全体の人口が減少しているなか、意外なことにもちの購入量が増加している地域も見つけたので、その理由も含めて紹介します。また、もちの形の地域差についても解説していますので、ぜひチェックしてくださいね。', 1, 350, '2023-08-04 14:25:18', '2023-08-04 14:25:18', 'Fresco', 1, 'eddkvo34o.jpg');
+INSERT INTO `alimentos` (`id`, `titulo`, `precio`, `descripcion`, `id_publicador`, `stock`, `fecha_de_creacion`, `fecha_de_eliminacion`, `estado`, `acepta_mercadopago`, `fotos`, `tag_id`) VALUES
+(1, 'おーいお茶500ｍｌペットボトル／おちゃ', 3500, 'お弁当をご注文時に限りお茶を格安で販売いたします。\r\n\r\n【主なご利用用途】\r\n会議・セミナー・謝恩会・説明会など\r\n', 1, 500, '2023-08-04 14:25:18', '0000-00-00 00:00:00', 'Si', 1, 'jugo_baggio.png', 2),
+(2, 'もち', 0, 'お正月といえば「もち」。鏡もちにお汁粉、焼いて食べても煮て食べてもおいしいもちですが、日本一もちを購入している都市はどこなのでしょうか。今回は、総務省の家計調査をもとに、もちの購入量が多い地域をランキング化してみました。日本全体の人口が減少しているなか、意外なことにもちの購入量が増加している地域も見つけたので、その理由も含めて紹介します。また、もちの形の地域差についても解説していますので、ぜひチェックしてくださいね。', 1, 350, '2023-08-04 14:25:18', '2023-08-04 14:25:18', 'Fresco', 1, 'havanna-alfajores.jpg', 2);
 
 -- --------------------------------------------------------
 
@@ -290,8 +291,18 @@ CREATE TABLE `inmuebles` (
   `id_fotos` int(11) NOT NULL,
   `id_video` int(11) NOT NULL,
   `acepta_mercado_pago` tinyint(1) NOT NULL,
-  `descripcion` varchar(255) NOT NULL
+  `descripcion` varchar(255) NOT NULL,
+  `tag_id` int(11) NOT NULL,
+  `fotos` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `inmuebles`
+--
+
+INSERT INTO `inmuebles` (`id`, `id_sitio`, `titulo`, `subtitulo`, `id_vendedor`, `id_categoria`, `id_tienda_oficial`, `precio`, `precio_base`, `id_moneda`, `cantidad_inicial`, `cantidad_disponible`, `cantidad_vendida`, `modo_compra`, `fecha_publicacion`, `fecha_de_eliminacion`, `condicion`, `miniatura`, `id_fotos`, `id_video`, `acepta_mercado_pago`, `descripcion`, `tag_id`, `fotos`) VALUES
+(1, 2, 'Departamento de lujo!!!', 'Compralo ya!!Pta d mrd', 1, 2, 1, 3213213, 122331, 1, 121240, 3, 1, 'Digital', '2023-09-08 13:54:47', NULL, 'Tener el dinero, ser un miembro de los anunakis y tener 2 gatos', 'Hola', 2, 3, 1, 'Casa de 3 pisos, 4 habitaciones en cada una, 2 baños, 2 cocinas y una terraza', 3, 'casa1.jpg'),
+(2, 4, 'Castillo embrujado', 'Si aparece un fantasma nos encargamos de cagarlo a trompadas por vos', 2, 3, 4, 213123, 46751, 1, 42423, 2, 2, 'Digital', '2023-09-08 13:54:47', NULL, 'Haber peleado con fantasmas de antemano, poder volar y haber ganado un torneo de candy crush', 'Mr Beast compra casa embrujada (no creeras lo que ocurre)', 2, 3, 1, 'CASTILLO EMBRUJADO con varias habitaciones, cocina, baños y jacuzzi', 3, 'casa2.jpg');
 
 -- --------------------------------------------------------
 
@@ -370,7 +381,8 @@ INSERT INTO `posts` (`id`, `usuario_id`, `image`, `fecha_alta`, `fecha_baja`) VA
 (10, '3', 'guilherme-machado-padoru.jpg', '2023-02-28 20:58:48', NULL),
 (11, '1', 'front_20230223_014807.png', '2023-02-28 21:07:11', NULL),
 (12, '1', '45156494.gif', '2023-03-01 20:11:59', NULL),
-(13, '1', 'mona-loading-dark.gif', '2023-03-01 20:12:40', NULL);
+(13, '1', 'mona-loading-dark.gif', '2023-03-01 20:12:40', NULL),
+(14, '1', '227300_screenshots_20230428204548_1.jpg', '2023-09-15 11:27:46', NULL);
 
 -- --------------------------------------------------------
 
@@ -413,15 +425,16 @@ CREATE TABLE `productos` (
   `fecha_de_creacion` datetime NOT NULL,
   `fecha_de_eliminacion` datetime DEFAULT NULL,
   `acepta_mercadopago` tinyint(1) NOT NULL,
-  `fotos` varchar(255) NOT NULL
+  `fotos` varchar(255) NOT NULL,
+  `tag_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`id`, `nombre`, `precio`, `id_publicador`, `detalles`, `stock`, `estado`, `fecha_de_creacion`, `fecha_de_eliminacion`, `acepta_mercadopago`, `fotos`) VALUES
-(1, 'Telefono Celular (usado)', 10500, 2, 'Telefono poco usado (no robado) tiene detalles minimos', 1, 'poco uso', '2023-08-04 14:51:46', NULL, 1, '17102023.jpg');
+INSERT INTO `productos` (`id`, `nombre`, `precio`, `id_publicador`, `detalles`, `stock`, `estado`, `fecha_de_creacion`, `fecha_de_eliminacion`, `acepta_mercadopago`, `fotos`, `tag_id`) VALUES
+(1, 'Telefono Celular (usado)', 10500, 2, 'Telefono poco usado (no robado) tiene detalles minimos', 1, 'poco uso', '2023-08-04 14:51:46', NULL, 1, 'iPhone14.jpg', 5);
 
 -- --------------------------------------------------------
 
@@ -478,11 +491,11 @@ CREATE TABLE `tags` (
 --
 
 INSERT INTO `tags` (`id`, `tag`) VALUES
-(1, 'all'),
-(2, 'anime'),
-(3, 'games'),
-(4, 'brands'),
-(5, 'animated_gif');
+(1, 'todos'),
+(2, 'alimentos'),
+(3, 'inmuebles'),
+(4, 'vehiculos'),
+(5, 'productos');
 
 -- --------------------------------------------------------
 
@@ -580,7 +593,7 @@ INSERT INTO `usuarios` (`id`, `nombre`, `contrasenia`, `saldo_en_cuenta`, `foto_
 (5, 'elpepe', 'e10adc3949ba59abbe56e057f20f883e', 0, '', 'pepito@gmail.com', '2023-08-11 08:17:23', NULL),
 (6, 'asdf', '912ec803b2ce49e4a541068d495ab570', 0, '', 'asdf@asdf', '2023-08-11 08:39:48', NULL),
 (7, 'qwer', '962012d09b8170d912f0669f6d7d9d07', 0, 'default.jpg', 'qwer@qwer', '2023-08-11 08:41:28', NULL),
-(8, 'Luh9090', '6b17f84c3e6e074b8a8c6de69a8cf25b', 0, 'lilith.jpg', 'lucaoshiro@gmail.com', '2023-08-11 08:57:45', NULL);
+(8, 'soy gay', '6b17f84c3e6e074b8a8c6de69a8cf25b', 0, 'default1.png', 'lucaoshiro@gmail.com', '2023-08-11 08:57:45', NULL);
 
 -- --------------------------------------------------------
 
@@ -603,17 +616,18 @@ CREATE TABLE `vehiculos` (
   `precio` int(255) NOT NULL,
   `estado` varchar(255) NOT NULL,
   `acepta_mercadopago` tinyint(1) NOT NULL,
-  `fotos` varchar(255) NOT NULL
+  `fotos` varchar(255) NOT NULL,
+  `tag_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `vehiculos`
 --
 
-INSERT INTO `vehiculos` (`id`, `titulo`, `color`, `tipo_combustible`, `descripcion`, `kilometros`, `id_publicador`, `detalles`, `stock`, `fecha_de_creacion`, `fecha_de_eliminacion`, `precio`, `estado`, `acepta_mercadopago`, `fotos`) VALUES
-(1, 'Tesla', 'Azul', 'Electrico', 'El Tesla Model Y es un SUV compacto y 100% eléctrico, del segmento D, fabricado por Tesla. Se trata de la versión crossover del Tesla Model 3, con quien comparte tecnología, plataforma, mecánicas y un 75% de los componentes.', 0, 1, 'El Tesla Model Y se presentó en marzo de 2019, aunque no llegó a España hasta 2021. El precio del Tesla Model Y parte desde 51.200 euros, un precio bastante más contenido que el del Tesla Model X. El Tesla Model Y se caracteriza por sus 7 plazas y por contar con una gran batería de iones de litio que le proporciona una autonomía eléctrica de entre 430 y 533 kilómetros, dependiendo de la versión. El Tesla Model Y se fabrica en las instalaciones de Tesla en California, así como en la Gigafactory de Shanghái (China) y la de Berlín.', 100, '2023-08-04 15:21:44', NULL, 23147, 'En buen estado, nuevecito.', 1, 'kfnvugi5758ur8bfrui54.jpg'),
-(2, 'Audi', 'Rojo', 'V-Power', 'Es un auto Audi.', 0, 2, 'Auto de cuatro puertas. Comodo para cualquiera.', 121, '2023-08-04 15:30:06', NULL, 120000, 'En venta', 1, 'audipromax.jpg'),
-(3, 'Toyota', 'Amarillo', 'V-Power', 'Auto nuevo y limpio', 0, 4, 'Auto de cuatro puertas importado de China.', 220, '2023-08-04 15:33:13', NULL, 210500, 'En venta', 0, 'ebfbefshebfkseoAD.jpg');
+INSERT INTO `vehiculos` (`id`, `titulo`, `color`, `tipo_combustible`, `descripcion`, `kilometros`, `id_publicador`, `detalles`, `stock`, `fecha_de_creacion`, `fecha_de_eliminacion`, `precio`, `estado`, `acepta_mercadopago`, `fotos`, `tag_id`) VALUES
+(1, 'Tesla', 'Azul', 'Electrico', 'El Tesla Model Y es un SUV compacto y 100% eléctrico, del segmento D, fabricado por Tesla. Se trata de la versión crossover del Tesla Model 3, con quien comparte tecnología, plataforma, mecánicas y un 75% de los componentes.', 0, 1, 'El Tesla Model Y se presentó en marzo de 2019, aunque no llegó a España hasta 2021. El precio del Tesla Model Y parte desde 51.200 euros, un precio bastante más contenido que el del Tesla Model X. El Tesla Model Y se caracteriza por sus 7 plazas y por contar con una gran batería de iones de litio que le proporciona una autonomía eléctrica de entre 430 y 533 kilómetros, dependiendo de la versión. El Tesla Model Y se fabrica en las instalaciones de Tesla en California, así como en la Gigafactory de Shanghái (China) y la de Berlín.', 100, '2023-08-04 15:21:44', NULL, 23147, 'En buen estado, nuevecito.', 1, 'tesla.jpg', 4),
+(2, 'Audi', 'Rojo', 'V-Power', 'Es un auto Audi.', 0, 2, 'Auto de cuatro puertas. Comodo para cualquiera.', 121, '2023-08-04 15:30:06', NULL, 120000, 'En venta', 1, 'audi.jpg', 4),
+(3, 'Toyota', 'Amarillo', 'V-Power', 'Auto nuevo y limpio', 0, 4, 'Auto de cuatro puertas importado de China.', 220, '2023-08-04 15:33:13', NULL, 210500, 'En venta', 0, 'toyota.jpg', 4);
 
 --
 -- Índices para tablas volcadas
@@ -855,7 +869,7 @@ ALTER TABLE `fotos`
 -- AUTO_INCREMENT de la tabla `inmuebles`
 --
 ALTER TABLE `inmuebles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `ofertas`
@@ -873,7 +887,7 @@ ALTER TABLE `pais`
 -- AUTO_INCREMENT de la tabla `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `prestamos`

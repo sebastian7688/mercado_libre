@@ -1,10 +1,16 @@
 <?php
 require_once "includes/config.php";
+if(session_status()!=1)session_start();
 $confirm = 0;
-if (isset($_FILES['image']) && isset($_POST['checkbox'])) {
-    $move = move_uploaded_file($_FILES['image']['tmp_name'], "img/posts/" . $_FILES['image']['name']);
-    if ($move) {
-        $sql = "INSERT INTO posts (usuario_id,image, fecha_alta) VALUES (1,'" . $_FILES['image']['name'] . "', NOW())";
+if (isset($_FILES['image']) && isset($_POST['checkbox'])&&isset($_POST['desc'])&& $_POST['checkbox']=="alimentos") {
+    if(isset($_POST['mercado'])){
+        $mercado=1;
+    }else{
+        $mercado=0;
+    }
+    $move = move_uploaded_file($_FILES['image']['tmp_name'], "img/alimentos/" . $_FILES['image']['name']);
+    if ($move ) {
+        $sql = "INSERT INTO alimentos (id,titulo, precio,descripcion,id_publicador,stock,fecha_de_creacion,fecha_de_eliminacion,acepta_mercadopago,fotos,directorio,tag_id) VALUES (null,'" . $_FILES['image']['name'] . "','" . $_POST['precio'] . "','" . $_POST['desc'] . "','" . $_SESSION['usuario']['id'] . "','" . $_POST['stock'] . "', NOW(),null,'" . $_POST['estado'] . "','" . $mercado . "')";
         $query = mysqli_query($link, $sql);
         if (!$query) {
             $confirm = 0;

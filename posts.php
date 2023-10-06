@@ -26,16 +26,16 @@ if (isset($_GET['tag'])) {
         
         // $query = mysqli_query($link, $sql);
         // $all=mysqli_fetch_all($query);
-        $sql ="SELECT directorio,fotos,fecha_de_creacion FROM alimentos";
+        $sql ="SELECT directorio,fotos,fecha_de_creacion,descripcion,titulo FROM alimentos";
         $query = mysqli_query($link, $sql);
         $alimentos=mysqli_fetch_all($query);
-        $sql ="SELECT directorio,fotos,fecha_de_creacion FROM vehiculos";
+        $sql ="SELECT directorio,fotos,fecha_de_creacion,descripcion,titulo FROM vehiculos";
         $query = mysqli_query($link, $sql);
         $vehiculos=mysqli_fetch_all($query);
-        $sql ="SELECT directorio,fotos,fecha_de_creacion FROM productos";
+        $sql ="SELECT directorio,fotos,fecha_de_creacion,descripcion,titulo FROM productos";
         $query = mysqli_query($link, $sql);
         $productos=mysqli_fetch_all($query);
-        $sql ="SELECT directorio,fotos,fecha_de_creacion FROM inmuebles";
+        $sql ="SELECT directorio,fotos,fecha_de_creacion,descripcion,titulo FROM inmuebles";
         $query = mysqli_query($link, $sql);
         $inmuebles=mysqli_fetch_all($query);
         $all = array_merge($alimentos,$vehiculos,$productos,$inmuebles);
@@ -114,7 +114,7 @@ if (isset($_GET['tag'])) {
     else if ($_GET['tag'] == "2") {
 
 
-        $sql = "SELECT alimentos.fotos FROM alimentos
+        $sql = "SELECT * FROM alimentos
     INNER JOIN tags
     ON alimentos.tag_id = tags.id
     WHERE alimentos.tag_id = '" . $_GET['tag'] . "'";
@@ -160,7 +160,7 @@ if (isset($_GET['tag'])) {
 
     //inmuebles
     else if ($_GET['tag'] == "3") {
-        $sql = "SELECT inmuebles.fotos FROM inmuebles
+        $sql = "SELECT * FROM inmuebles
     INNER JOIN tags
     ON inmuebles.tag_id = tags.id
     WHERE inmuebles.tag_id = '" . $_GET['tag'] . "'";

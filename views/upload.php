@@ -6,12 +6,16 @@ images
 <br>
 <label>
     tags: <br>
-    <!--<input type="textarea" name="tags" style="height:100px;width:175px;">-->
-    <input type="checkbox" name="checkbox" value="2"> anime
-    <input type="checkbox" name="checkbox" value="3"> games
-    <input type="checkbox" name="checkbox" value="4"> brands
-    <input type="checkbox" name="checkbox" value="5"> animated_gif
+    <input type="radio" name="checkbox" value="alimentos">alimentos<br>
+    <input type="radio" name="checkbox" value="inmuebles">inmuebles<br>
+    <input type="radio" name="checkbox" value="vehiculos">vehiculos<br>
+    <input type="radio" name="checkbox" value="productos">productos<br>
 </label>
+<input type="text" name="desc" placeholder="Descripción del producto">descripción<br>
+<input type="text" name="precio" placeholder="Precio del producto">precio<br>
+<input type="text" name="stock" placeholder="stock">stock<br>
+<input type="text" name="estado" placeholder="estado del producto">estado<br>
+<input type="checkbox" name="mercado" value="mercado">acepta mercado pago<br>
 <br>
     <input type="submit" name="submit" value="Upload file">
 </form>

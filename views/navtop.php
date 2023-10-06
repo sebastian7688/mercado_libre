@@ -7,7 +7,7 @@ if(session_status() !== PHP_SESSION_ACTIVE)session_start();?>
   <div class="navitems">
     <div class="navlink navbrand">
       <a href="index.php"><img src="img/org_6.png" width="100" height="90"
-       style="float:left; padding: 7px 15px 1px 25px !important;"></a>
+       class="icon"></a>
     </div>
     <div class="navlink">
       <a href="settings.php"

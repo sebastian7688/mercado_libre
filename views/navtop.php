@@ -14,7 +14,7 @@ if(session_status() !== PHP_SESSION_ACTIVE)session_start();?>
         style="float: left; display: block; color: #ffffff; text-align: center; padding: 20px 16px 23px 16px; text-decoration: none;"><b>Settings</b></a>
     </div>
     <div class="navlink">
-      <a href="posts.php?pag=1"
+      <a href="posts.php?tag=1&pag=1"
         style="float: left; display: block; color: #ffffff; text-align: center; padding: 20px 16px 23px 16px; text-decoration: none;"><b>Productos</b></a>
     </div>
     <div class="navlink">

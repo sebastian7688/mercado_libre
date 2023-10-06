@@ -12,6 +12,13 @@
     </Form>-->
     <?php
     //echo $ppp;
+    // var_dump($all);
+    // echo "<br><br>";
+    echo($cant['c']);
+    // var_dump($cant_alimentos['c']);
+    // var_dump($cant_inmuebles['c']);
+    // var_dump($cant_productos['c']);
+    // var_dump($cant_vehiculos['c'])
     ?>
 </Section>
 <Section class="tags" style="float: left;">
@@ -25,7 +32,7 @@
         <?php } ?>
     </table>
 </Section>
-<?php if (!isset($_GET['tag']) || (isset($_GET['tag']) && $_GET['tag'] == "1")) { ?>
+<!-- <?php if (!isset($_GET['tag']) || (isset($_GET['tag']) && $_GET['tag'] == "1")) { ?>
     <main>
         <div class="tbody" style="text-align: center;">
             <?php foreach ($posts as $post) { ?>
@@ -42,7 +49,17 @@
             } ?>
         </div>
     </main>
-<?php } ?>
+<?php } ?> -->
+<?php if (isset($_GET['tag']) && $_GET['tag'] == "1") { ?>
+    <main>
+        <div class="tbody" style="text-align: center;">
+            <?php foreach ($all as $one) { ?>
+                <a><img src="img/<?php echo $one[0] ?>/<?php echo $one[1] ?>" height=200 width=150 style="object-fit: contain;"></a>
+            <?php }
+            $cont = $cont + 1; ?>
+        </div>
+    </main>
+<?php }?>
 <?php if (isset($_GET['tag']) && $_GET['tag'] == "2") { ?>
     <main>
         <div class="tbody" style="text-align: center;">

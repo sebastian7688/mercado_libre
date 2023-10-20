@@ -11,6 +11,7 @@ images
     <input type="radio" name="checkbox" value="vehiculos">vehiculos<br>
     <input type="radio" name="checkbox" value="productos">productos<br>
 </label>
+<input type="text" name="title" placeholder="Nombre del producto">Nombre<br>
 <input type="text" name="desc" placeholder="Descripción del producto">descripción<br>
 <input type="text" name="precio" placeholder="Precio del producto">precio<br>
 <input type="text" name="stock" placeholder="stock">stock<br>

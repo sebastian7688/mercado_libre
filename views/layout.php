@@ -15,8 +15,8 @@ if (!isset($section)) {
     <link href="img/favicon.ico" rel="icon">
     <link href="css/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
     <link href="css/layout.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/fontawesome.css">
 <link rel="stylesheet" href="css/home.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>

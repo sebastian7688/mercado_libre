@@ -54,7 +54,7 @@
                                     <?php echo substr($one[3], 0, 100); ?> &hellip;
                                 </p>
                             </div>
-                            <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+                            <a href="post.php?tag=<?php echo $one[0] ?>&prodid=<?php echo $one[5] ?>" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
                                 Leer más
                             </a>
                         </div>
@@ -87,7 +87,7 @@ if (isset($_GET['tag']) && $_GET['tag'] == "2") { ?>
                                     <?php echo substr($ali['descripcion'], 0, 100); ?> &hellip;
                                 </p>
                             </div>
-                            <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+                            <a href="post.php?tag=<?php echo $ali['directorio'] ?>&prodid=<?php echo $ali['id'] ?>" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
                                 Leer más
                             </a>
                         </div>
@@ -120,7 +120,7 @@ if (isset($_GET['tag']) && $_GET['tag'] == "3") { ?>
                                     <?php echo substr($inm['descripcion'], 0, 100); ?> &hellip;
                                 </p>
                             </div>
-                            <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+                            <a href="post.php?tag=<?php echo $inm['directorio'] ?>&prodid=<?php echo $inm['id'] ?>" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
                                 Leer más
                             </a>
                         </div>
@@ -153,7 +153,7 @@ if (isset($_GET['tag']) && $_GET['tag'] == "4") { ?>
                                     <?php echo substr($veh['descripcion'], 0, 100); ?> &hellip;
                                 </p>
                             </div>
-                            <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+                            <a href="post.php?tag=<?php echo $veh['directorio'] ?>&prodid=<?php echo $veh['id'] ?>" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
                                 Leer más
                             </a>
                         </div>
@@ -186,7 +186,7 @@ if (isset($_GET['tag']) && $_GET['tag'] == "5") { ?>
                                     <?php echo substr($pro['detalles'], 0, 100); ?> &hellip;
                                 </p>
                             </div>
-                            <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+                            <a href="post.php?tag=<?php echo $pro['directorio'] ?>&prodid=<?php echo $pro['id'] ?>" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
                                 Leer más
                             </a>
                         </div>

@@ -26,16 +26,16 @@ if (isset($_GET['tag'])) {
           
         // $query = mysqli_query($link, $sql);
         // $all=mysqli_fetch_all($query);
-        $sql ="SELECT directorio,fotos,fecha_de_creacion,descripcion,titulo FROM alimentos";
+        $sql ="SELECT directorio,fotos,fecha_de_creacion,descripcion,titulo,id FROM alimentos";
         $query = mysqli_query($link, $sql);
         $alimentos=mysqli_fetch_all($query);
-        $sql ="SELECT directorio,fotos,fecha_de_creacion,descripcion,titulo FROM vehiculos";
+        $sql ="SELECT directorio,fotos,fecha_de_creacion,descripcion,titulo,id FROM vehiculos";
         $query = mysqli_query($link, $sql);
         $vehiculos=mysqli_fetch_all($query);
-        $sql ="SELECT directorio,fotos,fecha_de_creacion,detalles,nombre FROM productos";
+        $sql ="SELECT directorio,fotos,fecha_de_creacion,descripcion,titulo,id FROM productos";
         $query = mysqli_query($link, $sql);
         $productos=mysqli_fetch_all($query);
-        $sql ="SELECT directorio,fotos,fecha_de_creacion,descripcion,titulo FROM inmuebles";
+        $sql ="SELECT directorio,fotos,fecha_de_creacion,descripcion,titulo,id FROM inmuebles";
         $query = mysqli_query($link, $sql);
         $inmuebles=mysqli_fetch_all($query);
         $all = array_merge($alimentos,$vehiculos,$productos,$inmuebles);

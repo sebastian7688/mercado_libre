@@ -19,7 +19,10 @@
     // var_dump($cant_alimentos['c']);
 
     // var_dump($cant_inmuebles['c']);
-    // var_dump($cant_productos['c']);
+    // var_dump($cant_productos['c']);<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
     // var_dump($cant_vehiculos['c'])
     ?>
 </Section>
@@ -28,7 +31,9 @@
         <?php foreach ($res['tags'] as $tag) { ?>
             <tr>
                 <td>
-                    <a href="posts.php?pag=1&tag=<?php echo $tag[0]; ?>">? + - <?php echo $tag[1]; ?></a>
+                    <a href="posts.php?pag=1&tag=<?php echo $tag[0]; ?>">  
+                    <button type="button"  style=" background: #119dee; margin:2px; height: 35px; width: 180px; border-top-right-radius: 200px 200px;margin-left:10px; margin-right:10px;" > <?php echo $tag[1]; ?></button></a>
+
                 </td>
             </tr>
         <?php } ?>

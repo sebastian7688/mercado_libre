@@ -23,7 +23,7 @@ if (isset($_GET['tag'])) {
 
 
         // $sql = "SELECT alimentos.fotos,productos.fotos,vehiculos.fotos,inmuebles.fotos FROM alimentos, productos, vehiculos, inmuebles";
-        
+          
         // $query = mysqli_query($link, $sql);
         // $all=mysqli_fetch_all($query);
         $sql ="SELECT directorio,fotos,fecha_de_creacion,descripcion,titulo FROM alimentos";
@@ -32,7 +32,7 @@ if (isset($_GET['tag'])) {
         $sql ="SELECT directorio,fotos,fecha_de_creacion,descripcion,titulo FROM vehiculos";
         $query = mysqli_query($link, $sql);
         $vehiculos=mysqli_fetch_all($query);
-        $sql ="SELECT directorio,fotos,fecha_de_creacion,descripcion,titulo FROM productos";
+        $sql ="SELECT directorio,fotos,fecha_de_creacion,detalles,nombre FROM productos";
         $query = mysqli_query($link, $sql);
         $productos=mysqli_fetch_all($query);
         $sql ="SELECT directorio,fotos,fecha_de_creacion,descripcion,titulo FROM inmuebles";

@@ -199,10 +199,10 @@ if (isset($_GET['tag']) && $_GET['tag'] == "5") { ?>
                                     <?php echo $pro['directorio'] ?>
                                 </p>
                                 <h1 class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
-                                    <?php echo $pro['titulo'] ?>
+                                    <?php echo $pro['nombre'] ?>
                                 </h1>
                                 <p class="mb-1">
-                                    <?php echo substr($pro['descripcion'], 0, 100); ?> &hellip;
+                                    <?php echo substr($pro['detalles'], 0, 100); ?> &hellip;
                                 </p>
                             </div>
                             <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">

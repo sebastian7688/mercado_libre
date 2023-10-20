@@ -48,7 +48,9 @@ if (isset($_POST['title'])&&isset($_POST['checkbox'])&& $_POST['checkbox']=="ali
     $sql="INSERT INTO alimentos (id,titulo,precio,descripcion,id_publicador,stock,fecha_de_creacion,fecha_de_eliminacion,estado,acepta_mercadopago,fotos,directorio,tag_id)
     VALUES (NULL,'".$_POST['title']."','".$precio."','".$desc."','".$_SESSION['usuario']['id']."','".$stock."',NOW(),NULL,'".$estado."','".$mercado."','".$_FILES['image']['name']."','alimentos',2)";
     $query=mysqli_query($link,$sql);
-
+if($query){
+header("Location:posts.php?tag=1&pag=1");
+}
 }
 
 $section = "upload";

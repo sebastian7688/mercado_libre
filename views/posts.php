@@ -1,26 +1,7 @@
 <Section class="actions">
     <a href="upload.php" style="font-family: verdana, sans-serif, helvetica;">Upload</a><br>
-    <!-- <Form method="post">
-        <label for="ppp">Posr per page</label>
-        <select name="ppp" id="ppp">
-            <option value="2">2</option>
-            <option value="8">8</option>
-            <option value="10">10</option>
-            <option value="20">20</option>
-        <input type="submit" value="Confirm">
-        </select>
-    </Form>-->
     <?php
-
-    //echo $ppp;
-    // var_dump($all);
-    // echo "<br><br>";
     echo ("Resultados: " . $cant['c']);
-    // var_dump($cant_alimentos['c']);
-
-    // var_dump($cant_inmuebles['c']);
-    // var_dump($cant_productos['c']);
-    // var_dump($cant_vehiculos['c'])
     ?>
 </Section>
 <Section class="tags" style="float: left;">
@@ -60,7 +41,7 @@
                 foreach ($all as $one) {
                     if ($cont % 4 == 0 && $cont != 0) echo "<tr>" ?>
                     <td>
-                        <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;">
+                        <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;height:35rem">
                             <img src="img/<?php echo $one[0] ?>/<?php echo $one[1] ?>" alt="Man with backpack" class="d-block w-full" height=200 width=150 style="object-fit: contain;">
                             <div class="px-2 py-2">
                                 <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
@@ -70,7 +51,7 @@
                                     <?php echo $one[4] ?>
                                 </h1>
                                 <p class="mb-1">
-                                    <?php echo $one[3] ?> &hellip;
+                                    <?php echo substr($one[3], 0, 100); ?> &hellip;
                                 </p>
                             </div>
                             <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
@@ -93,7 +74,7 @@ if (isset($_GET['tag']) && $_GET['tag'] == "2") { ?>
                 foreach ($alim as $ali) {
                     if ($cont % 4 == 0 && $cont != 0) echo "<tr>" ?>
                     <td>
-                        <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;">
+                        <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;height:35rem">
                             <img src="img/<?php echo $ali['directorio'] ?>/<?php echo $ali['fotos'] ?>" alt="Man with backpack" class="d-block w-full" height=200 width=150 style="object-fit: contain;">
                             <div class="px-2 py-2">
                                 <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
@@ -126,7 +107,7 @@ if (isset($_GET['tag']) && $_GET['tag'] == "3") { ?>
                 foreach ($inmue as $inm) {
                     if ($cont % 4 == 0 && $cont != 0) echo "<tr>" ?>
                     <td>
-                        <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;">
+                        <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;height:35rem">
                             <img src="img/<?php echo $inm['directorio'] ?>/<?php echo $inm['fotos'] ?>" alt="Man with backpack" class="d-block w-full" height=200 width=150 style="object-fit: contain;">
                             <div class="px-2 py-2">
                                 <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
@@ -159,7 +140,7 @@ if (isset($_GET['tag']) && $_GET['tag'] == "4") { ?>
                 foreach ($vehi as $veh) {
                     if ($cont % 4 == 0 && $cont != 0) echo "<tr>" ?>
                     <td>
-                        <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;">
+                        <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;height:35rem">
                             <img src="img/<?php echo $veh['directorio'] ?>/<?php echo $veh['fotos'] ?>" alt="Man with backpack" class="d-block w-full" height=200 width=150 style="object-fit: contain;">
                             <div class="px-2 py-2">
                                 <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
@@ -192,7 +173,7 @@ if (isset($_GET['tag']) && $_GET['tag'] == "5") { ?>
                 foreach ($prod as $pro) {
                     if ($cont % 4 == 0 && $cont != 0) echo "<tr>" ?>
                     <td>
-                        <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;">
+                        <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;height:35rem">
                             <img src="img/<?php echo $pro['directorio'] ?>/<?php echo $pro['fotos'] ?>" alt="Man with backpack" class="d-block w-full" height=200 width=150 style="object-fit: contain;">
                             <div class="px-2 py-2">
                                 <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">

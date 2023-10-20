@@ -88,6 +88,20 @@ $sql = "SELECT * FROM usuarios";
     }
     $_SESSION['usuario']['foto_de_perfil'] = $img;
 }
+
+if(isset($_POST['saldo'])){
+    $money = $_POST['saldo'];
+    $sql = "UPDATE usuarios SET saldo_en_cuenta = '".$_SESSION['usuario']['saldo_en_cuenta']+$money."' WHERE ID = '".$_SESSION['usuario']['id']."'";
+    $query = mysqli_query($link,$sql);
+    if (!$query) {
+        echo "Fallo consulta: " . mysqli_error($link);
+        exit();
+    }
+    $_SESSION['usuario']['saldo_en_cuenta'] = $_SESSION['usuario']['saldo_en_cuenta']+$money;
+ }
+
+
+
 $section = "profile";
 $title = "Profile";
 require_once "views/layout.php";

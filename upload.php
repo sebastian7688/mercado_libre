@@ -1,6 +1,6 @@
 <?php
 require_once "includes/config.php";
-if(session_status()!=1)session_start();
+if(session_status()!==1)session_start();
 $confirm = 0;
 if (isset($_FILES['image']) && isset($_POST['checkbox'])&&isset($_POST['desc'])&& $_POST['checkbox']=="alimentos") {
     if(isset($_POST['mercado'])){

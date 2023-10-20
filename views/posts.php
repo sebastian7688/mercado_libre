@@ -35,7 +35,7 @@
 <?php } ?> -->
 <?php if (isset($_GET['tag']) && $_GET['tag'] == "1") { ?>
     <main>
-        <div class="tbody" style="text-align: center;">
+        <div class="tbody" style="text-align: center; margin: auto;width: 75%; padding: 10px;">
             <table>
                 <?php $cont = 0;
                 foreach ($all as $one) {
@@ -68,7 +68,7 @@
 <?php }
 if (isset($_GET['tag']) && $_GET['tag'] == "2") { ?>
     <main>
-        <div class="tbody" style="text-align: center;">
+        <div class="tbody" style="text-align: center; margin: auto;width: 75%; padding: 10px;">
             <table>
                 <?php $cont = 0;
                 foreach ($alim as $ali) {
@@ -101,7 +101,7 @@ if (isset($_GET['tag']) && $_GET['tag'] == "2") { ?>
 <?php }
 if (isset($_GET['tag']) && $_GET['tag'] == "3") { ?>
     <main>
-        <div class="tbody" style="text-align: center;">
+        <div class="tbody" style="text-align: center; margin: auto;width: 75%; padding: 10px;">
             <table>
                 <?php $cont = 0;
                 foreach ($inmue as $inm) {
@@ -134,7 +134,7 @@ if (isset($_GET['tag']) && $_GET['tag'] == "3") { ?>
 <?php }
 if (isset($_GET['tag']) && $_GET['tag'] == "4") { ?>
     <main>
-        <div class="tbody" style="text-align: center;">
+        <div class="tbody" style="text-align: center; margin: auto;width: 75%; padding: 10px;">
             <table>
                 <?php $cont = 0;
                 foreach ($vehi as $veh) {
@@ -167,7 +167,7 @@ if (isset($_GET['tag']) && $_GET['tag'] == "4") { ?>
 <?php }
 if (isset($_GET['tag']) && $_GET['tag'] == "5") { ?>
     <main>
-        <div class="tbody" style="text-align: center;">
+        <div class="tbody" style="text-align: center; margin: auto;width: 75%; padding: 10px;">
             <table>
                 <?php $cont = 0;
                 foreach ($prod as $pro) {

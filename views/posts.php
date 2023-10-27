@@ -1,5 +1,5 @@
 <Section class="actions">
-    <a href="upload.php" style="font-family: verdana, sans-serif, helvetica;">Upload</a><br>
+    <a href="upload.php?step=1" style="font-family: verdana, sans-serif, helvetica;">Upload</a><br>
     <?php
     echo ("Resultados: " . $cant['c']);
     ?>

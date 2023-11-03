@@ -11,7 +11,7 @@
             <tr>
                 <td>
                     <a href="posts.php?pag=1&tag=<?php echo $tag[0]; ?>">  
-                    <button type="button" class="tag"> <?php echo $tag[1]; ?></button></a>
+                    <button type="button" class="tag"><?php echo $tag[1]; ?></button></a>
                 </td>
             </tr>
         <?php } ?>

@@ -25,9 +25,11 @@ if(session_status() !== PHP_SESSION_ACTIVE)session_start();?>
       <a href="index.php"
         style="float: left; display: block; color: #ffffff; text-align: center; padding: 20px 16px 23px 16px; text-decoration: none;"><b>Home</b></a>
     </div>
+    <?php if(isset($_SESSION['usuario'])){?>
     <div class="navlink">
     <a 
-        style="float: left; display: block; color: #ffffff; text-align: center; padding: 20px 16px 23px 16px; text-decoration: none;" href="profile.php"><b><?php if(isset($_SESSION['usuario'])){echo($_SESSION['usuario']['nombre']);} ?></b></a>
+        style="float: left; display: block; color: #ffffff; text-align: center; padding: 20px 16px 23px 16px; text-decoration: none;" href="profile.php"><b><?php echo($_SESSION['usuario']['nombre']);?></b></a>
     </div>
+    <?php } ?>
   </div>
 </div>

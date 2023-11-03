@@ -37,8 +37,8 @@
 <?php if (isset($_GET['step']) && $_GET['step'] == "2") { ?>
     <form method="POST">
         <label>
-            Seleccione el tipo de producto: <br>
-            <input type="text" name="title" placeholder="Nombre del producto">Nombre<br>
+            Escriba el nombre del producto: <br>
+            <input type="text" name="title" placeholder="Nombre del producto" required>Nombre<br>
             <input type="submit" name="next" value="Siguiente">
         </label>
     </form>

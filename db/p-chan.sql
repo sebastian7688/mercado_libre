@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-10-2023 a las 15:50:24
+-- Tiempo de generación: 20-10-2023 a las 16:57:26
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -275,7 +275,7 @@ CREATE TABLE `inmuebles` (
   `id_sitio` int(11) NOT NULL,
   `titulo` varchar(255) NOT NULL,
   `subtitulo` varchar(255) NOT NULL,
-  `id_vendedor` int(11) NOT NULL,
+  `id_publicador` int(11) NOT NULL,
   `id_categoria` int(11) NOT NULL,
   `id_tienda_oficial` int(11) NOT NULL,
   `precio` int(11) NOT NULL,
@@ -302,7 +302,7 @@ CREATE TABLE `inmuebles` (
 -- Volcado de datos para la tabla `inmuebles`
 --
 
-INSERT INTO `inmuebles` (`id`, `id_sitio`, `titulo`, `subtitulo`, `id_vendedor`, `id_categoria`, `id_tienda_oficial`, `precio`, `precio_base`, `id_moneda`, `cantidad_inicial`, `cantidad_disponible`, `cantidad_vendida`, `modo_compra`, `fecha_de_creacion`, `fecha_de_eliminacion`, `condicion`, `miniatura`, `id_fotos`, `id_video`, `acepta_mercado_pago`, `descripcion`, `tag_id`, `fotos`, `directorio`) VALUES
+INSERT INTO `inmuebles` (`id`, `id_sitio`, `titulo`, `subtitulo`, `id_publicador`, `id_categoria`, `id_tienda_oficial`, `precio`, `precio_base`, `id_moneda`, `cantidad_inicial`, `cantidad_disponible`, `cantidad_vendida`, `modo_compra`, `fecha_de_creacion`, `fecha_de_eliminacion`, `condicion`, `miniatura`, `id_fotos`, `id_video`, `acepta_mercado_pago`, `descripcion`, `tag_id`, `fotos`, `directorio`) VALUES
 (1, 2, 'Departamento de lujo!!!', 'Compralo ya!!Pta d mrd', 1, 2, 1, 3213213, 122331, 1, 121240, 3, 1, 'Digital', '2023-09-08 13:54:47', NULL, 'Tener el dinero, ser un miembro de los anunakis y tener 2 gatos', 'Hola', 2, 3, 1, 'Casa de 3 pisos, 4 habitaciones en cada una, 2 baños, 2 cocinas y una terraza', 3, 'casa1.jpg', 'inmuebles'),
 (2, 4, 'Castillo embrujado', 'Si aparece un fantasma nos encargamos de cagarlo a trompadas por vos', 2, 3, 4, 213123, 46751, 1, 42423, 2, 2, 'Digital', '2023-09-08 13:54:47', NULL, 'Haber peleado con fantasmas de antemano, poder volar y haber ganado un torneo de candy crush', 'Mr Beast compra casa embrujada (no creeras lo que ocurre)', 2, 3, 1, 'CASTILLO EMBRUJADO con varias habitaciones, cocina, baños y jacuzzi', 3, 'casa2.jpg', 'inmuebles');
 
@@ -418,10 +418,10 @@ INSERT INTO `prestamos` (`id_usuarios`, `saldo`, `fecha_prestamo`) VALUES
 
 CREATE TABLE `productos` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(255) NOT NULL,
+  `titulo` varchar(255) NOT NULL,
   `precio` float NOT NULL,
   `id_publicador` int(11) NOT NULL,
-  `detalles` varchar(255) NOT NULL,
+  `descripcion` varchar(255) NOT NULL,
   `stock` int(11) NOT NULL,
   `estado` varchar(255) NOT NULL,
   `fecha_de_creacion` datetime NOT NULL,
@@ -436,7 +436,7 @@ CREATE TABLE `productos` (
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`id`, `nombre`, `precio`, `id_publicador`, `detalles`, `stock`, `estado`, `fecha_de_creacion`, `fecha_de_eliminacion`, `acepta_mercadopago`, `fotos`, `directorio`, `tag_id`) VALUES
+INSERT INTO `productos` (`id`, `titulo`, `precio`, `id_publicador`, `descripcion`, `stock`, `estado`, `fecha_de_creacion`, `fecha_de_eliminacion`, `acepta_mercadopago`, `fotos`, `directorio`, `tag_id`) VALUES
 (1, 'Telefono Celular (usado)', 10500, 2, 'Telefono poco usado (no robado) tiene detalles minimos', 1, 'poco uso', '2023-08-04 14:51:46', NULL, 1, 'iPhone14.jpg', 'productos', 5);
 
 -- --------------------------------------------------------

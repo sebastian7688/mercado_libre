@@ -1,5 +1,5 @@
 <Section class="actions">
-    <a href="upload.php" style="font-family: verdana, sans-serif, helvetica;">Upload</a><br>
+    <a href="upload.php?step=1" style="font-family: verdana, sans-serif, helvetica;">Upload</a><br>
     <?php
     echo ("Resultados: " . $cant['c']);
     ?>
@@ -56,7 +56,7 @@
                                     <?php echo substr($one[3], 0, 100); ?> &hellip;
                                 </p>
                             </div>
-                            <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+                            <a href="post.php?tag=<?php echo $one[0] ?>&prodid=<?php echo $one[5] ?>" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
                                 Leer más
                             </a>
                         </div>
@@ -89,7 +89,7 @@ if (isset($_GET['tag']) && $_GET['tag'] == "2") { ?>
                                     <?php echo substr($ali['descripcion'], 0, 100); ?> &hellip;
                                 </p>
                             </div>
-                            <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+                            <a href="post.php?tag=<?php echo $ali['directorio'] ?>&prodid=<?php echo $ali['id'] ?>" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
                                 Leer más
                             </a>
                         </div>
@@ -122,7 +122,7 @@ if (isset($_GET['tag']) && $_GET['tag'] == "3") { ?>
                                     <?php echo substr($inm['descripcion'], 0, 100); ?> &hellip;
                                 </p>
                             </div>
-                            <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+                            <a href="post.php?tag=<?php echo $inm['directorio'] ?>&prodid=<?php echo $inm['id'] ?>" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
                                 Leer más
                             </a>
                         </div>
@@ -155,7 +155,7 @@ if (isset($_GET['tag']) && $_GET['tag'] == "4") { ?>
                                     <?php echo substr($veh['descripcion'], 0, 100); ?> &hellip;
                                 </p>
                             </div>
-                            <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+                            <a href="post.php?tag=<?php echo $veh['directorio'] ?>&prodid=<?php echo $veh['id'] ?>" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
                                 Leer más
                             </a>
                         </div>
@@ -182,13 +182,13 @@ if (isset($_GET['tag']) && $_GET['tag'] == "5") { ?>
                                     <?php echo $pro['directorio'] ?>
                                 </p>
                                 <h1 class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
-                                    <?php echo $pro['nombre'] ?>
+                                    <?php echo $pro['titulo'] ?>
                                 </h1>
                                 <p class="mb-1">
-                                    <?php echo substr($pro['detalles'], 0, 100); ?> &hellip;
+                                    <?php echo substr($pro['descripcion'], 0, 100); ?> &hellip;
                                 </p>
                             </div>
-                            <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+                            <a href="post.php?tag=<?php echo $pro['directorio'] ?>&prodid=<?php echo $pro['id'] ?>" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
                                 Leer más
                             </a>
                         </div>
